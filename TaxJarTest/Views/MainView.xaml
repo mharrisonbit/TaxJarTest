@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             x:Class="TaxJarTest.Views.MainView"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="True"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Label Text="Figure your tax here."
+               Grid.Row="0"
+               HorizontalTextAlignment="Center"/>
+        <Entry Placeholder="Total"
+               Grid.Row="1"/>
+        <Entry Placeholder="Total"
+               Grid.Row="2"/>
+        <Entry Placeholder="Total"
+               Grid.Row="3"/>
+        <Entry Placeholder="Total"
+               Grid.Row="4"/>
+        <Entry Placeholder="Total"
+               Grid.Row="5"/>
+        <Button Text="Figure Tax"
+                Grid.Row="6"
+                Command="{Binding FigureTaxBtn}"/>
+     </Grid>
+</ContentPage>
