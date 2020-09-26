@@ -112,15 +112,15 @@ namespace TaxJarTest.ViewModels
                 float.TryParse(TotalTxt, out var totalAmountFlt);
 
                 JObject orderInfo = new JObject
-                    {
-                        { "to_country", CountryTxt },
-                        { "to_zip", ZipTxt },
-                        { "to_state", StateTxt },
-                        { "shipping", shippingAmountFlt },
-                        { "amount", totalAmountFlt },
-                        { "from_zip", "07001"},
-                        { "from_state", "NJ"},
-                    };
+                {
+                    { "to_country", CountryTxt },
+                    { "to_zip", ZipTxt },
+                    { "to_state", StateTxt },
+                    { "shipping", shippingAmountFlt },
+                    { "amount", totalAmountFlt },
+                    { "from_zip", "07001"},
+                    { "from_state", "NJ"},
+                };
                 var answer = await this.getData.GetTaxForOrderFromApi(orderInfo);
                 var tempTaxCalculations = TaxCalculations.FromJson(answer);
                 Calculations = tempTaxCalculations;
