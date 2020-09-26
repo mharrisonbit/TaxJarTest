@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxJarTest.iOS", "TaxJarTes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxJarTest", "TaxJarTest\TaxJarTest.csproj", "{8DAB221A-1687-49A0-BE7E-510B725E7977}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platforms", "Platforms", "{B9ECD4AF-9EDF-4219-974B-263131ED6796}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxJarTest.Tests", "TaxJarTest.Tests\TaxJarTest.Tests.csproj", "{874EEDCE-B39A-4118-B642-62946CB06B76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,5 +57,21 @@ Global
 		{8DAB221A-1687-49A0-BE7E-510B725E7977}.Debug|iPhone.Build.0 = Debug|Any CPU
 		{8DAB221A-1687-49A0-BE7E-510B725E7977}.Release|iPhone.ActiveCfg = Release|Any CPU
 		{8DAB221A-1687-49A0-BE7E-510B725E7977}.Release|iPhone.Build.0 = Release|Any CPU
+		{874EEDCE-B39A-4118-B642-62946CB06B76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{874EEDCE-B39A-4118-B642-62946CB06B76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{874EEDCE-B39A-4118-B642-62946CB06B76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{874EEDCE-B39A-4118-B642-62946CB06B76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{874EEDCE-B39A-4118-B642-62946CB06B76}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{874EEDCE-B39A-4118-B642-62946CB06B76}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{874EEDCE-B39A-4118-B642-62946CB06B76}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{874EEDCE-B39A-4118-B642-62946CB06B76}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{874EEDCE-B39A-4118-B642-62946CB06B76}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{874EEDCE-B39A-4118-B642-62946CB06B76}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{874EEDCE-B39A-4118-B642-62946CB06B76}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{874EEDCE-B39A-4118-B642-62946CB06B76}.Release|iPhone.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A1A790BB-35E7-4A8E-9227-76873A8A1FCD} = {B9ECD4AF-9EDF-4219-974B-263131ED6796}
+		{F3599F82-BAB3-4162-A6DE-F387E67CABE9} = {B9ECD4AF-9EDF-4219-974B-263131ED6796}
 	EndGlobalSection
 EndGlobal

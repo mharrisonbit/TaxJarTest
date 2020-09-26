@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +12,7 @@ namespace TaxJarTest.RestCalls
 {
     public class GetDataCalls : IGetDataCalls
     {
-        public async Task<string> GetDataFromApi(JObject callData)
+        public async Task<string> GetTaxRatesFromApi(JObject callData)
         {
             var details = "";
             var apiUrl = Constants.ApiUrl;

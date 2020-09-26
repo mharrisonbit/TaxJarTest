@@ -5,7 +5,7 @@ namespace TaxJarTest.Interfaces
 {
     public interface IGetDataCalls
     {
-        Task<string> GetDataFromApi(JObject callData);
+        Task<string> GetTaxRatesFromApi(JObject callData);
         Task<string> GetTaxForOrderFromApi(JObject orderInfo);
     }
 }
