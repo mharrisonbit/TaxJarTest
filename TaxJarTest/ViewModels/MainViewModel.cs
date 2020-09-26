@@ -93,7 +93,7 @@ namespace TaxJarTest.ViewModels
                     { "city", CityTxt }
                 };
 
-                var answer = await this.getData.GetDataFromApi(jObject);
+                var answer = await this.getData.GetTaxRatesFromApi(jObject);
                 var tempTaxRate = TaxRate.FromJson(answer);
                 TaxRateObj = tempTaxRate;
             }
@@ -105,22 +105,30 @@ namespace TaxJarTest.ViewModels
 
         private async Task FigureTaxForOrderBtnCmd()
         {
-            //TODO convert the shipping to float
-            float.TryParse(ShippingFeeTxt, out var shippingAmountFlt);
-            float.TryParse(TotalTxt, out var totalAmountFlt);
-            JObject orderInfo = new JObject
-                {
-                    { "to_country", CountryTxt },
-                    { "to_zip", ZipTxt },
-                    { "to_state", StateTxt },
-                    { "shipping", shippingAmountFlt },
-                    { "amount", totalAmountFlt },
-                    { "from_zip", "07001"},
-                    { "from_state", "NJ"},
-                };
-            var answer = await this.getData.GetTaxForOrderFromApi(orderInfo);
-            var tempTaxCalculations = TaxCalculations.FromJson(answer);
-            Calculations = tempTaxCalculations;
+            try
+            {
+                //TODO convert the shipping to float
+                float.TryParse(ShippingFeeTxt, out var shippingAmountFlt);
+                float.TryParse(TotalTxt, out var totalAmountFlt);
+
+                JObject orderInfo = new JObject
+                    {
+                        { "to_country", CountryTxt },
+                        { "to_zip", ZipTxt },
+                        { "to_state", StateTxt },
+                        { "shipping", shippingAmountFlt },
+                        { "amount", totalAmountFlt },
+                        { "from_zip", "07001"},
+                        { "from_state", "NJ"},
+                    };
+                var answer = await this.getData.GetTaxForOrderFromApi(orderInfo);
+                var tempTaxCalculations = TaxCalculations.FromJson(answer);
+                Calculations = tempTaxCalculations;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"                MainViewModel:FigureTaxForOrderBtnCmd {ex.Message}");
+            }
         }
     }
 }
